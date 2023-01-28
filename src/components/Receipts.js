@@ -1,15 +1,17 @@
 import React from "react";
 import {useState} from 'react';
+import { useStateValue } from "../StateProvider";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import ReceiptImage from "./receiptStock.jpeg";
 const firebase = require('../firebase.js');
 
 function Receipts() {
+  const [{ basket, user, drawer }, dispatch] = useStateValue();
+
   const onImageChange = (e) => {
-    const imageRef = ref(firebase.storage, 'users/'  + e.target.files[0].name)
+    const imageRef = ref(firebase.storage, 'users/' + user.uid + '/' + e.target.files[0].name)
     console.log(e.target.files[0].name)
     uploadBytesResumable(imageRef, e.target.files[0]).then((snapshot) => {
-          console.log('Uploaded a blob or file! to ' + 'users/');
           });
     console.log("IMAGE CHANGES")
   }
