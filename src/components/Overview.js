@@ -19,13 +19,13 @@ function App() {
                     <article class="p-6 bg-[#D9D9D9] rounded-lg border border-[#D9D9D9] shadow-md">
                         <div class="flex justify-between items-center mb-5 text-[#3E3131]">
                             <h3 class="text-2xl font-bold tracking-tight text-[#3E3131]"><a href="#">My budget</a></h3>
-                            <h2 class="text-2xl font-bold tracking-tight text-[#3E3131]]"><a href="#">$450.00</a></h2>
+                            <h2 class="text-2xl font-bold tracking-tight text-[#3E3131]"><a href="#">$450.00</a></h2>
                         </div>
                     </article>
                     <article class="p-6 bg-[#D9D9D9] rounded-lg border border-[#D9D9D9] shadow-md">
                         <div class="flex justify-between items-center mb-5 text-[#3E3131]">
-                            <h3 class="mb-2 text-2xl font-bold tracking-tight text-[#3E3131]]"><a href="#">Total income</a></h3>
-                            <h2 class="mb-2 text-2xl font-bold tracking-tight text-[#3E3131]]"><a href="#">$435,500</a></h2>
+                            <h3 class="mb-2 text-2xl font-bold tracking-tight text-[#3E3131]"><a href="#">Total income</a></h3>
+                            <h2 class="mb-2 text-2xl font-bold tracking-tight text-[#3E3131]"><a href="#">$435,500</a></h2>
                         </div>
                     </article>
                     <article class="p-6 bg-[#D9D9D9] rounded-lg border border-[#D9D9D9] shadow-md">
