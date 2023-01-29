@@ -10,7 +10,7 @@ function Upload() {
     const [date, setDate] = useState('');
     const [title, setTitle] = useState('');
     const [load, setLoad] = useState(0);
-    const myPath = './images/test2.jpg';
+    const myPath = './images/test.jpg';
 
     useEffect(() => {
         Tesseract.recognize(

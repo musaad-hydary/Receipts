@@ -1,6 +1,7 @@
 export const initialState = {
     basket: [],
     user: null,
+    spending: 0.0,
     drawer: false,
   };
 
@@ -11,6 +12,16 @@ export const initialState = {
         return {
           ...state,
           user: action.user,
+        };
+      case "ADD_TOTAL":
+        return {
+          ...state,
+          spending: parseFloat(state.spending) + parseFloat(action.price),
+        };
+      case "REMOVE_TOTAL":
+        return {
+          ...state,
+          spending: parseFloat(state.spending) - parseFloat(action.price),
         };
       default:
         return state;

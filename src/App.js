@@ -7,9 +7,13 @@ import Receipts from "./components/Receipts";
 import React, { useEffect } from "react";
 import {auth} from "./firebase";
 import { useStateValue } from "./StateProvider";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Parent from "./components/Parent";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
+
+ 
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -29,12 +33,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Home />
-      <Overview />
-      <Upload/>
-      <Receipts />
-    </div>
+      <div className="App">      
+        <Router>
+          <Routes>
+            <Route path="/next" element={<Parent />} />
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Router>
+      </div>
   );
 }
 

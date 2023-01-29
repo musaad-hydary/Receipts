@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useState } from "react";
+import { useStateValue } from "react";
 
 const Home = () => {
   const [value, setValue] = useState('');
@@ -9,7 +10,8 @@ const Home = () => {
   function handleClick(){
     signInWithPopup(auth,provider).then((data) => {
       setValue('data.user.email')
-      localStorage.setItem('email', data.user.email)
+    }).then(() => {
+      window.location.href = '/next';
     })
   }
 
